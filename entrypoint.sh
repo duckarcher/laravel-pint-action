@@ -33,7 +33,7 @@ if [[ "$2" == "true" ]]; then
             git commit -m 'Fixed styling' --author "$AUTHOR"
             
             HASH=$(git rev-parse HEAD)
-            echo -en "$COMMENT\n$HASH" >> .git-blame-ignore-revs
+            echo -e "$COMMENT\n$HASH" >> .git-blame-ignore-revs
             
             git add .git-blame-ignore-revs
             git commit -m 'Updated .git-blame-ignore-revs' --author "$AUTHOR"
