@@ -1,0 +1,12 @@
+name: "laravel-pint-action"
+description: "Simple laravel-pint action"
+inputs:
+  args:
+    description: "laravel-pint args"
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}
