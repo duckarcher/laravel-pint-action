@@ -4,9 +4,14 @@ inputs:
   args:
     description: "laravel-pint args"
     required: true
+  save_output:
+    description: "save output"
+    required: false
+    default: false
 
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.args }}
+    - ${{ inputs.save_output }}
