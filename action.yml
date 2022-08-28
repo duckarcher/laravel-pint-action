@@ -4,8 +4,12 @@ inputs:
   args:
     description: "laravel-pint args"
     required: true
-  save_output:
-    description: "save output"
+  auto_commit:
+    description: "auto commit formatted code and add the current commit to .git-blame-ignore-revs"
+    required: false
+    default: false
+  pr_comment:
+    description: "create pr comment with pint output"
     required: false
     default: false
 
@@ -14,4 +18,5 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.args }}
-    - ${{ inputs.save_output }}
+    - ${{ inputs.auto_commit }}
+    - ${{ inputs.pr_comment }}
