@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "before all"
+
 ISSUE_NUMBER=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
 GITHUB_URL="https://api.github.com"
 BRANCH=${GITHUB_HEAD_REF#refs/heads/}
@@ -9,7 +11,11 @@ if [[ ! -z "$GITHUB_CUSTOM_URL" ]]; then
     GITHUB_URL=$GITHUB_CUSTOM_URL
 fi
 
+echo "before pint command"
+
 PINT_OUTPUT=$(/tmp/vendor/bin/pint $1)
+
+echo "after pint command"
 
 echo -e "$PINT_OUTPUT"
 
