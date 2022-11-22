@@ -1,7 +1,7 @@
 ## Example usage
 
 ```yaml
-uses: makelarisjr/laravel-pint-action@v1
+uses: duckarcher/laravel-pint-action@v1
 with:
   args: --test
 ```
