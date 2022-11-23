@@ -13,13 +13,7 @@ fi
 
 echo "before pint command"
 
-TEST_OUTPUT=$(ls /tmp)
-echo -e "$TEST_OUTPUT"
-
-TEST_OUTPUT=$(ls .)
-echo -e "$TEST_OUTPUT"
-
-PINT_OUTPUT=$(/tmp/vendor/bin/pint $1)
+PINT_OUTPUT=$(/vendor/bin/pint $1)
 
 echo "after pint command"
 
