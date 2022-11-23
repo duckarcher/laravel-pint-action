@@ -13,7 +13,7 @@ fi
 
 echo "before pint command"
 
-PINT_OUTPUT=$(/vendor/bin/pint $1)
+PINT_OUTPUT=$(./vendor/bin/pint $1)
 
 echo "after pint command"
 
