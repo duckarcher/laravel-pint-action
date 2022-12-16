@@ -13,6 +13,8 @@ fi
 
 echo "before pint command"
 
+ls -la ./vendor/bin
+
 PINT_OUTPUT=$(./vendor/bin/pint $1)
 
 echo "after pint command"
